@@ -17,14 +17,4 @@ threads=8
 # threads=1
 nickname=gfm_ori_track_easier
 
-python core/train.py \
-    --logname=$nickname \
-    --backbone=$backbone \
-    --rosta=$rosta \
-    --batchSize=$batchsize \
-    --nEpochs=$nEpochs \
-    --lr=$lr \
-    --threads=$threads \
-    --bg_choice=$bg_choice \
-    --fg_generate=$fg_generate \
-    --model_save_dir=models/trained/$nickname/ \
+python core/train.py --logname=$nickname --backbone=$backbone --rosta=$rosta --batchSize=$batchsize --nEpochs=$nEpochs --lr=$lr --threads=$threads --bg_choice=$bg_choice --fg_generate=$fg_generate --model_save_dir=models/trained/$nickname/

@@ -1,0 +1,487 @@
+usage: train.py [-h] [--gpuNums GPUNUMS] [--nEpochs NEPOCHS] [--lr LR]
+                [--threads THREADS] [--backbone {r34,r34_2b,d121,r101}]
+                [--rosta {TT,FT,BT}] [--batchSize BATCHSIZE] --bg_choice
+                {original,hd,coco} --fg_generate {closed_form,alpha_blending}
+                [--rssn_denoise] [--model_save_dir MODEL_SAVE_DIR]
+                [--logname LOGNAME]
+train.py: error: unrecognized arguments: \
+usage: train.py [-h] [--gpuNums GPUNUMS] [--nEpochs NEPOCHS] [--lr LR]
+                [--threads THREADS] [--backbone {r34,r34_2b,d121,r101}]
+                [--rosta {TT,FT,BT}] [--batchSize BATCHSIZE] --bg_choice
+                {original,hd,coco} --fg_generate {closed_form,alpha_blending}
+                [--rssn_denoise] [--model_save_dir MODEL_SAVE_DIR]
+                [--logname LOGNAME]
+train.py: error: unrecognized arguments: \
+usage: train.py [-h] [--gpuNums GPUNUMS] [--nEpochs NEPOCHS] [--lr LR]
+                [--threads THREADS] [--backbone {r34,r34_2b,d121,r101}]
+                [--rosta {TT,FT,BT}] [--batchSize BATCHSIZE] --bg_choice
+                {original,hd,coco} --fg_generate {closed_form,alpha_blending}
+                [--rssn_denoise] [--model_save_dir MODEL_SAVE_DIR]
+                [--logname LOGNAME]
+train.py: error: unrecognized arguments: \
+usage: train.py [-h] [--gpuNums GPUNUMS] [--nEpochs NEPOCHS] [--lr LR]
+                [--threads THREADS] [--backbone {r34,r34_2b,d121,r101}]
+                [--rosta {TT,FT,BT}] [--batchSize BATCHSIZE] --bg_choice
+                {original,hd,coco} --fg_generate {closed_form,alpha_blending}
+                [--rssn_denoise] [--model_save_dir MODEL_SAVE_DIR]
+                [--logname LOGNAME]
+train.py: error: unrecognized arguments: \
+  File "core/train.py", line 138
+    print(f'===> Logging to {logging_filename}') 
+                                              ^
+SyntaxError: invalid syntax
+usage: train.py [-h] [--gpuNums GPUNUMS] [--nEpochs NEPOCHS] [--lr LR]
+                [--threads THREADS] [--backbone {r34,r34_2b,d121,r101}]
+                [--rosta {TT,FT,BT}] [--batchSize BATCHSIZE] --bg_choice
+                {original,hd,coco} --fg_generate {closed_form,alpha_blending}
+                [--rssn_denoise] [--model_save_dir MODEL_SAVE_DIR]
+                [--logname LOGNAME]
+train.py: error: unrecognized arguments: \
+usage: train.py [-h] [--gpuNums GPUNUMS] [--nEpochs NEPOCHS] [--lr LR]
+                [--threads THREADS] [--backbone {r34,r34_2b,d121,r101}]
+                [--rosta {TT,FT,BT}] [--batchSize BATCHSIZE] --bg_choice
+                {original,hd,coco} --fg_generate {closed_form,alpha_blending}
+                [--rssn_denoise] [--model_save_dir MODEL_SAVE_DIR]
+                [--logname LOGNAME]
+train.py: error: unrecognized arguments: \
+usage: train.py [-h] [--gpuNums GPUNUMS] [--nEpochs NEPOCHS] [--lr LR]
+                [--threads THREADS] [--backbone {r34,r34_2b,d121,r101}]
+                [--rosta {TT,FT,BT}] [--batchSize BATCHSIZE] --bg_choice
+                {original,hd,coco} --fg_generate {closed_form,alpha_blending}
+                [--rssn_denoise] [--model_save_dir MODEL_SAVE_DIR]
+                [--logname LOGNAME]
+train.py: error: unrecognized arguments: \
+usage: train.py [-h] [--gpuNums GPUNUMS] [--nEpochs NEPOCHS] [--lr LR]
+                [--threads THREADS] [--backbone {r34,r34_2b,d121,r101}]
+                [--rosta {TT,FT,BT}] [--batchSize BATCHSIZE] --bg_choice
+                {original,hd,coco} --fg_generate {closed_form,alpha_blending}
+                [--rssn_denoise] [--model_save_dir MODEL_SAVE_DIR]
+                [--logname LOGNAME]
+train.py: error: the following arguments are required: --bg_choice, --fg_generate
+usage: train.py [-h] [--gpuNums GPUNUMS] [--nEpochs NEPOCHS] [--lr LR]
+                [--threads THREADS] [--backbone {r34,r34_2b,d121,r101}]
+                [--rosta {TT,FT,BT}] [--batchSize BATCHSIZE] --bg_choice
+                {original,hd,coco} --fg_generate {closed_form,alpha_blending}
+                [--rssn_denoise] [--model_save_dir MODEL_SAVE_DIR]
+                [--logname LOGNAME]
+train.py: error: unrecognized arguments: \
+Namespace(backbone='r34', batchSize=32, bg_choice='original', fg_generate='alpha_blending', gpuNums=1, logname='gfm_ori_track_easier', lr=1e-05, model_save_dir='models/trained/gfm_ori_track_easier/', nEpochs=100, rosta='TT', rssn_denoise=False, threads=8)
+===> Logging to logs/train_logs/gfm_ori_track_easier_2021-12-01-18:15.log
+Train on Epoch: 1
+Train on Epoch: 2
+/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/torch/nn/functional.py:2952: UserWarning: nn.functional.upsample is deprecated. Use nn.functional.interpolate instead.
+  warnings.warn("nn.functional.upsample is deprecated. Use nn.functional.interpolate instead.")
+/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/torch/nn/functional.py:3063: UserWarning: Default upsampling behavior when mode=bilinear is changed to align_corners=False since 0.4.0. Please specify align_corners=True if the old behavior is desired. See the documentation of nn.Upsample for details.
+  "See the documentation of nn.Upsample for details.".format(mode))
+/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/torch/nn/functional.py:1639: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/logging/__init__.py", line 994, in emit
+    msg = self.format(record)
+  File "/usr/lib/python3.6/logging/__init__.py", line 840, in format
+    return fmt.format(record)
+  File "/usr/lib/python3.6/logging/__init__.py", line 577, in format
+    record.message = record.getMessage()
+  File "/usr/lib/python3.6/logging/__init__.py", line 338, in getMessage
+    msg = msg % self.args
+TypeError: not all arguments converted during string formatting
+Call stack:
+  File "core/train.py", line 181, in <module>
+    main()
+  File "core/train.py", line 178, in main
+    save_last_checkpoint(args, model)
+  File "core/train.py", line 128, in save_last_checkpoint
+    args.logging.info('=====> Saving best model',str(args.epoch))
+Message: '=====> Saving best model'
+Arguments: ('1',)
+Traceback (most recent call last):
+  File "/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 872, in _try_get_data
+    data = self._data_queue.get(timeout=timeout)
+  File "/usr/lib/python3.6/multiprocessing/queues.py", line 104, in get
+    if not self._poll(timeout):
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 257, in poll
+    return self._poll(timeout)
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 414, in _poll
+    r = wait([self], timeout)
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 911, in wait
+    ready = selector.select(timeout)
+  File "/usr/lib/python3.6/selectors.py", line 376, in select
+    fd_event_list = self._poll.poll(timeout)
+  File "/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/torch/utils/data/_utils/signal_handling.py", line 66, in handler
+    _error_if_any_worker_fails()
+RuntimeError: DataLoader worker (pid 16037) is killed by signal: Terminated. 
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "core/train.py", line 181, in <module>
+    main()
+  File "core/train.py", line 176, in main
+    train(args, model, optimizer, train_loader, epoch)
+  File "core/train.py", line 85, in train
+    for iteration, batch in enumerate(train_loader, 1):
+  File "/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 435, in __next__
+    data = self._next_data()
+  File "/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 1068, in _next_data
+    idx, data = self._get_data()
+  File "/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 1034, in _get_data
+    success, data = self._try_get_data()
+  File "/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 885, in _try_get_data
+    raise RuntimeError('DataLoader worker (pid(s) {}) exited unexpectedly'.format(pids_str)) from e
+RuntimeError: DataLoader worker (pid(s) 16037) exited unexpectedly
+  File "core/train.py", line 138
+    print(f'===> Logging to {logging_filename}') 
+                                              ^
+SyntaxError: invalid syntax
+Namespace(backbone='r34', batchSize=32, bg_choice='original', fg_generate='alpha_blending', gpuNums=1, logname='gfm_ori_track_easier', lr=1e-05, model_save_dir='models/trained/gfm_ori_track_easier/', nEpochs=100, rosta='TT', rssn_denoise=False, threads=8)
+===> Logging to logs/train_logs/gfm_ori_track_easier_2021-12-01-18:19.log
+Train on Epoch: 1
+/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/PIL/Image.py:2837: DecompressionBombWarning: Image size (98180762 pixels) exceeds limit of 89478485 pixels, could be decompression bomb DOS attack.
+  DecompressionBombWarning,
+/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/PIL/Image.py:2837: DecompressionBombWarning: Image size (89600000 pixels) exceeds limit of 89478485 pixels, could be decompression bomb DOS attack.
+  DecompressionBombWarning,
+/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/PIL/Image.py:2837: DecompressionBombWarning: Image size (108000000 pixels) exceeds limit of 89478485 pixels, could be decompression bomb DOS attack.
+  DecompressionBombWarning,
+/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/PIL/Image.py:2837: DecompressionBombWarning: Image size (100000000 pixels) exceeds limit of 89478485 pixels, could be decompression bomb DOS attack.
+  DecompressionBombWarning,
+/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/PIL/Image.py:2837: DecompressionBombWarning: Image size (90436500 pixels) exceeds limit of 89478485 pixels, could be decompression bomb DOS attack.
+  DecompressionBombWarning,
+Train on Epoch: 2
+/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/torch/nn/functional.py:2952: UserWarning: nn.functional.upsample is deprecated. Use nn.functional.interpolate instead.
+  warnings.warn("nn.functional.upsample is deprecated. Use nn.functional.interpolate instead.")
+/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/torch/nn/functional.py:3063: UserWarning: Default upsampling behavior when mode=bilinear is changed to align_corners=False since 0.4.0. Please specify align_corners=True if the old behavior is desired. See the documentation of nn.Upsample for details.
+  "See the documentation of nn.Upsample for details.".format(mode))
+/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/torch/nn/functional.py:1639: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/logging/__init__.py", line 994, in emit
+    msg = self.format(record)
+  File "/usr/lib/python3.6/logging/__init__.py", line 840, in format
+    return fmt.format(record)
+  File "/usr/lib/python3.6/logging/__init__.py", line 577, in format
+    record.message = record.getMessage()
+  File "/usr/lib/python3.6/logging/__init__.py", line 338, in getMessage
+    msg = msg % self.args
+TypeError: not all arguments converted during string formatting
+Call stack:
+  File "core/train.py", line 181, in <module>
+    main()
+  File "core/train.py", line 178, in main
+    save_last_checkpoint(args, model)
+  File "core/train.py", line 128, in save_last_checkpoint
+    args.logging.info('=====> Saving best model',str(args.epoch))
+Message: '=====> Saving best model'
+Arguments: ('1',)
+/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/PIL/Image.py:2837: DecompressionBombWarning: Image size (89600000 pixels) exceeds limit of 89478485 pixels, could be decompression bomb DOS attack.
+  DecompressionBombWarning,
+/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/PIL/Image.py:2837: DecompressionBombWarning: Image size (100000000 pixels) exceeds limit of 89478485 pixels, could be decompression bomb DOS attack.
+  DecompressionBombWarning,
+/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/PIL/Image.py:2837: DecompressionBombWarning: Image size (90436500 pixels) exceeds limit of 89478485 pixels, could be decompression bomb DOS attack.
+  DecompressionBombWarning,
+/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/PIL/Image.py:2837: DecompressionBombWarning: Image size (108000000 pixels) exceeds limit of 89478485 pixels, could be decompression bomb DOS attack.
+  DecompressionBombWarning,
+/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/PIL/Image.py:2837: DecompressionBombWarning: Image size (98180762 pixels) exceeds limit of 89478485 pixels, could be decompression bomb DOS attack.
+  DecompressionBombWarning,
+Train on Epoch: 3
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/logging/__init__.py", line 994, in emit
+    msg = self.format(record)
+  File "/usr/lib/python3.6/logging/__init__.py", line 840, in format
+    return fmt.format(record)
+  File "/usr/lib/python3.6/logging/__init__.py", line 577, in format
+    record.message = record.getMessage()
+  File "/usr/lib/python3.6/logging/__init__.py", line 338, in getMessage
+    msg = msg % self.args
+TypeError: not all arguments converted during string formatting
+Call stack:
+  File "core/train.py", line 181, in <module>
+    main()
+  File "core/train.py", line 178, in main
+    save_last_checkpoint(args, model)
+  File "core/train.py", line 128, in save_last_checkpoint
+    args.logging.info('=====> Saving best model',str(args.epoch))
+Message: '=====> Saving best model'
+Arguments: ('2',)
+/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/PIL/Image.py:2837: DecompressionBombWarning: Image size (89600000 pixels) exceeds limit of 89478485 pixels, could be decompression bomb DOS attack.
+  DecompressionBombWarning,
+/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/PIL/Image.py:2837: DecompressionBombWarning: Image size (90436500 pixels) exceeds limit of 89478485 pixels, could be decompression bomb DOS attack.
+  DecompressionBombWarning,
+/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/PIL/Image.py:2837: DecompressionBombWarning: Image size (100000000 pixels) exceeds limit of 89478485 pixels, could be decompression bomb DOS attack.
+  DecompressionBombWarning,
+/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/PIL/Image.py:2837: DecompressionBombWarning: Image size (108000000 pixels) exceeds limit of 89478485 pixels, could be decompression bomb DOS attack.
+  DecompressionBombWarning,
+/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/PIL/Image.py:2837: DecompressionBombWarning: Image size (98180762 pixels) exceeds limit of 89478485 pixels, could be decompression bomb DOS attack.
+  DecompressionBombWarning,
+Train on Epoch: 4
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/logging/__init__.py", line 994, in emit
+    msg = self.format(record)
+  File "/usr/lib/python3.6/logging/__init__.py", line 840, in format
+    return fmt.format(record)
+  File "/usr/lib/python3.6/logging/__init__.py", line 577, in format
+    record.message = record.getMessage()
+  File "/usr/lib/python3.6/logging/__init__.py", line 338, in getMessage
+    msg = msg % self.args
+TypeError: not all arguments converted during string formatting
+Call stack:
+  File "core/train.py", line 181, in <module>
+    main()
+  File "core/train.py", line 178, in main
+    save_last_checkpoint(args, model)
+  File "core/train.py", line 128, in save_last_checkpoint
+    args.logging.info('=====> Saving best model',str(args.epoch))
+Message: '=====> Saving best model'
+Arguments: ('3',)
+/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/PIL/Image.py:2837: DecompressionBombWarning: Image size (89600000 pixels) exceeds limit of 89478485 pixels, could be decompression bomb DOS attack.
+  DecompressionBombWarning,
+/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/PIL/Image.py:2837: DecompressionBombWarning: Image size (90436500 pixels) exceeds limit of 89478485 pixels, could be decompression bomb DOS attack.
+  DecompressionBombWarning,
+/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/PIL/Image.py:2837: DecompressionBombWarning: Image size (98180762 pixels) exceeds limit of 89478485 pixels, could be decompression bomb DOS attack.
+  DecompressionBombWarning,
+/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/PIL/Image.py:2837: DecompressionBombWarning: Image size (108000000 pixels) exceeds limit of 89478485 pixels, could be decompression bomb DOS attack.
+  DecompressionBombWarning,
+/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/PIL/Image.py:2837: DecompressionBombWarning: Image size (100000000 pixels) exceeds limit of 89478485 pixels, could be decompression bomb DOS attack.
+  DecompressionBombWarning,
+Train on Epoch: 5
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/logging/__init__.py", line 994, in emit
+    msg = self.format(record)
+  File "/usr/lib/python3.6/logging/__init__.py", line 840, in format
+    return fmt.format(record)
+  File "/usr/lib/python3.6/logging/__init__.py", line 577, in format
+    record.message = record.getMessage()
+  File "/usr/lib/python3.6/logging/__init__.py", line 338, in getMessage
+    msg = msg % self.args
+TypeError: not all arguments converted during string formatting
+Call stack:
+  File "core/train.py", line 181, in <module>
+    main()
+  File "core/train.py", line 178, in main
+    save_last_checkpoint(args, model)
+  File "core/train.py", line 128, in save_last_checkpoint
+    args.logging.info('=====> Saving best model',str(args.epoch))
+Message: '=====> Saving best model'
+Arguments: ('4',)
+/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/PIL/Image.py:2837: DecompressionBombWarning: Image size (108000000 pixels) exceeds limit of 89478485 pixels, could be decompression bomb DOS attack.
+  DecompressionBombWarning,
+/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/PIL/Image.py:2837: DecompressionBombWarning: Image size (100000000 pixels) exceeds limit of 89478485 pixels, could be decompression bomb DOS attack.
+  DecompressionBombWarning,
+/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/PIL/Image.py:2837: DecompressionBombWarning: Image size (98180762 pixels) exceeds limit of 89478485 pixels, could be decompression bomb DOS attack.
+  DecompressionBombWarning,
+/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/PIL/Image.py:2837: DecompressionBombWarning: Image size (89600000 pixels) exceeds limit of 89478485 pixels, could be decompression bomb DOS attack.
+  DecompressionBombWarning,
+/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/PIL/Image.py:2837: DecompressionBombWarning: Image size (90436500 pixels) exceeds limit of 89478485 pixels, could be decompression bomb DOS attack.
+  DecompressionBombWarning,
+Train on Epoch: 6
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/logging/__init__.py", line 994, in emit
+    msg = self.format(record)
+  File "/usr/lib/python3.6/logging/__init__.py", line 840, in format
+    return fmt.format(record)
+  File "/usr/lib/python3.6/logging/__init__.py", line 577, in format
+    record.message = record.getMessage()
+  File "/usr/lib/python3.6/logging/__init__.py", line 338, in getMessage
+    msg = msg % self.args
+TypeError: not all arguments converted during string formatting
+Call stack:
+  File "core/train.py", line 181, in <module>
+    main()
+  File "core/train.py", line 178, in main
+    save_last_checkpoint(args, model)
+  File "core/train.py", line 128, in save_last_checkpoint
+    args.logging.info('=====> Saving best model',str(args.epoch))
+Message: '=====> Saving best model'
+Arguments: ('5',)
+Namespace(backbone='r34', batchSize=32, bg_choice='original', fg_generate='alpha_blending', gpuNums=1, logname='gfm_ori_track_easier', lr=1e-05, model_save_dir='models/trained/gfm_ori_track_easier/', nEpochs=100, rosta='TT', rssn_denoise=False, threads=8)
+===> Logging to logs/train_logs/gfm_ori_track_easier_2021-12-02-08:30.log
+Train on Epoch: 1
+/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/torch/nn/functional.py:2952: UserWarning: nn.functional.upsample is deprecated. Use nn.functional.interpolate instead.
+  warnings.warn("nn.functional.upsample is deprecated. Use nn.functional.interpolate instead.")
+/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/torch/nn/functional.py:3063: UserWarning: Default upsampling behavior when mode=bilinear is changed to align_corners=False since 0.4.0. Please specify align_corners=True if the old behavior is desired. See the documentation of nn.Upsample for details.
+  "See the documentation of nn.Upsample for details.".format(mode))
+/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/torch/nn/functional.py:1639: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+Traceback (most recent call last):
+  File "/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 872, in _try_get_data
+    data = self._data_queue.get(timeout=timeout)
+  File "/usr/lib/python3.6/multiprocessing/queues.py", line 104, in get
+    if not self._poll(timeout):
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 257, in poll
+    return self._poll(timeout)
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 414, in _poll
+    r = wait([self], timeout)
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 911, in wait
+    ready = selector.select(timeout)
+  File "/usr/lib/python3.6/selectors.py", line 376, in select
+    fd_event_list = self._poll.poll(timeout)
+  File "/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/torch/utils/data/_utils/signal_handling.py", line 66, in handler
+    _error_if_any_worker_fails()
+RuntimeError: DataLoader worker (pid 5569) is killed by signal: Terminated. 
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "core/train.py", line 185, in <module>
+    main()
+  File "core/train.py", line 180, in main
+    train(args, model, optimizer, train_loader, epoch)
+  File "core/train.py", line 87, in train
+    for iteration, batch in enumerate(train_loader, 1):
+  File "/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 435, in __next__
+    data = self._next_data()
+  File "/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 1068, in _next_data
+    idx, data = self._get_data()
+  File "/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 1034, in _get_data
+    success, data = self._try_get_data()
+  File "/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 885, in _try_get_data
+    raise RuntimeError('DataLoader worker (pid(s) {}) exited unexpectedly'.format(pids_str)) from e
+RuntimeError: DataLoader worker (pid(s) 5569) exited unexpectedly
+  File "core/train.py", line 140
+    print(f'===> Logging to {logging_filename}') 
+                                              ^
+SyntaxError: invalid syntax
+Namespace(backbone='r34', batchSize=32, bg_choice='original', fg_generate='alpha_blending', gpuNums=1, logname='gfm_ori_track_easier', lr=1e-05, model_save_dir='models/trained/gfm_ori_track_easier/', nEpochs=100, rosta='TT', rssn_denoise=False, threads=16)
+===> Logging to logs/train_logs/gfm_ori_track_easier_2021-12-02-10:48.log
+Train on Epoch: 1
+/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/torch/nn/functional.py:2952: UserWarning: nn.functional.upsample is deprecated. Use nn.functional.interpolate instead.
+  warnings.warn("nn.functional.upsample is deprecated. Use nn.functional.interpolate instead.")
+/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/torch/nn/functional.py:3063: UserWarning: Default upsampling behavior when mode=bilinear is changed to align_corners=False since 0.4.0. Please specify align_corners=True if the old behavior is desired. See the documentation of nn.Upsample for details.
+  "See the documentation of nn.Upsample for details.".format(mode))
+/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/torch/nn/functional.py:1639: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+Traceback (most recent call last):
+  File "/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 872, in _try_get_data
+    data = self._data_queue.get(timeout=timeout)
+  File "/usr/lib/python3.6/multiprocessing/queues.py", line 104, in get
+    if not self._poll(timeout):
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 257, in poll
+    return self._poll(timeout)
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 414, in _poll
+    r = wait([self], timeout)
+  File "/usr/lib/python3.6/multiprocessing/connection.py", line 911, in wait
+    ready = selector.select(timeout)
+  File "/usr/lib/python3.6/selectors.py", line 376, in select
+    fd_event_list = self._poll.poll(timeout)
+  File "/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/torch/utils/data/_utils/signal_handling.py", line 66, in handler
+    _error_if_any_worker_fails()
+RuntimeError: DataLoader worker (pid 15023) is killed by signal: Terminated. 
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "core/train.py", line 185, in <module>
+    main()
+  File "core/train.py", line 180, in main
+    train(args, model, optimizer, train_loader, epoch)
+  File "core/train.py", line 87, in train
+    for iteration, batch in enumerate(train_loader, 1):
+  File "/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 435, in __next__
+    data = self._next_data()
+  File "/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 1068, in _next_data
+    idx, data = self._get_data()
+  File "/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 1034, in _get_data
+    success, data = self._try_get_data()
+  File "/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 885, in _try_get_data
+    raise RuntimeError('DataLoader worker (pid(s) {}) exited unexpectedly'.format(pids_str)) from e
+RuntimeError: DataLoader worker (pid(s) 15023) exited unexpectedly
+  File "core/train.py", line 140
+    print(f'===> Logging to {logging_filename}') 
+                                              ^
+SyntaxError: invalid syntax
+Namespace(backbone='r34', batchSize=8, bg_choice='original', fg_generate='alpha_blending', gpuNums=1, logname='gfm_ori_track_easier', lr=1e-05, model_save_dir='models/trained/gfm_ori_track_easier/', nEpochs=100, rosta='TT', rssn_denoise=False, threads=8)
+===> Logging to logs/train_logs/gfm_ori_track_easier_2021-12-02-11:20.log
+Train on Epoch: 1
+/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/PIL/Image.py:2837: DecompressionBombWarning: Image size (90436500 pixels) exceeds limit of 89478485 pixels, could be decompression bomb DOS attack.
+  DecompressionBombWarning,
+/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/PIL/Image.py:2837: DecompressionBombWarning: Image size (98180762 pixels) exceeds limit of 89478485 pixels, could be decompression bomb DOS attack.
+  DecompressionBombWarning,
+/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/PIL/Image.py:2837: DecompressionBombWarning: Image size (100000000 pixels) exceeds limit of 89478485 pixels, could be decompression bomb DOS attack.
+  DecompressionBombWarning,
+/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/PIL/Image.py:2837: DecompressionBombWarning: Image size (108000000 pixels) exceeds limit of 89478485 pixels, could be decompression bomb DOS attack.
+  DecompressionBombWarning,
+/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/PIL/Image.py:2837: DecompressionBombWarning: Image size (89600000 pixels) exceeds limit of 89478485 pixels, could be decompression bomb DOS attack.
+  DecompressionBombWarning,
+Train on Epoch: 2
+/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/torch/nn/functional.py:2952: UserWarning: nn.functional.upsample is deprecated. Use nn.functional.interpolate instead.
+  warnings.warn("nn.functional.upsample is deprecated. Use nn.functional.interpolate instead.")
+/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/torch/nn/functional.py:3063: UserWarning: Default upsampling behavior when mode=bilinear is changed to align_corners=False since 0.4.0. Please specify align_corners=True if the old behavior is desired. See the documentation of nn.Upsample for details.
+  "See the documentation of nn.Upsample for details.".format(mode))
+/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/torch/nn/functional.py:1639: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/logging/__init__.py", line 994, in emit
+    msg = self.format(record)
+  File "/usr/lib/python3.6/logging/__init__.py", line 840, in format
+    return fmt.format(record)
+  File "/usr/lib/python3.6/logging/__init__.py", line 577, in format
+    record.message = record.getMessage()
+  File "/usr/lib/python3.6/logging/__init__.py", line 338, in getMessage
+    msg = msg % self.args
+TypeError: not all arguments converted during string formatting
+Call stack:
+  File "core/train.py", line 185, in <module>
+    main()
+  File "core/train.py", line 182, in main
+    save_last_checkpoint(args, model)
+  File "core/train.py", line 130, in save_last_checkpoint
+    args.logging.info('=====> Saving best model',str(args.epoch))
+Message: '=====> Saving best model'
+Arguments: ('1',)
+> /home/ubuntu/kartik/GFM/core/train.py(125)train()
+-> import sys, traceback
+(Pdb) /home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/PIL/Image.py:2837: DecompressionBombWarning: Image size (98180762 pixels) exceeds limit of 89478485 pixels, could be decompression bomb DOS attack.
+  DecompressionBombWarning,
+Traceback (most recent call last):
+  File "core/train.py", line 101, in train
+    predict_global, predict_local, predict_fusion = model(ori)
+  File "/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/torch/nn/parallel/data_parallel.py", line 159, in forward
+    return self.module(*inputs[0], **kwargs[0])
+  File "/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/ubuntu/kartik/GFM/core/gfm.py", line 341, in forward
+    d0_f = self.decoder0_f(torch.cat((d1_f, e0),1))
+  File "/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/torch/nn/modules/container.py", line 117, in forward
+    input = module(input)
+  File "/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/torch/nn/modules/batchnorm.py", line 136, in forward
+    self.weight, self.bias, bn_training, exponential_average_factor, self.eps)
+  File "/home/ubuntu/kartik/GFM/gfm-env/lib/python3.6/site-packages/torch/nn/functional.py", line 2058, in batch_norm
+    training, momentum, eps, torch.backends.cudnn.enabled
+RuntimeError: CUDA out of memory. Tried to allocate 50.00 MiB (GPU 0; 15.78 GiB total capacity; 2.46 GiB already allocated; 11.75 MiB free; 2.51 GiB reserved in total by PyTorch)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "core/train.py", line 185, in <module>
+    main()
+  File "core/train.py", line 180, in main
+    train(args, model, optimizer, train_loader, epoch)
+  File "core/train.py", line 125, in train
+    import sys, traceback
+  File "core/train.py", line 125, in train
+    import sys, traceback
+  File "/usr/lib/python3.6/bdb.py", line 51, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/lib/python3.6/bdb.py", line 69, in dispatch_line
+    self.user_line(frame)
+  File "/usr/lib/python3.6/pdb.py", line 261, in user_line
+    self.interaction(frame, None)
+  File "/usr/lib/python3.6/pdb.py", line 352, in interaction
+    self._cmdloop()
+  File "/usr/lib/python3.6/pdb.py", line 321, in _cmdloop
+    self.cmdloop()
+  File "/usr/lib/python3.6/cmd.py", line 126, in cmdloop
+    line = input(self.prompt)
+OSError: [Errno 9] Bad file descriptor
