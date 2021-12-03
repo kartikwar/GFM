@@ -120,8 +120,8 @@ def train(args, model, optimizer, train_loader, epoch):
 				loss_each_epoch.append(loss.item())
 				args.logging.info("GFM-Epoch[{}/{}]({}/{}) Lr:{:.8f} Loss:{:.5f} Global:{:.5f} Local:{:.5f} Fusion-alpha:{:.5f} Fusion-comp:{:.5f} Speed:{:.5f}s/iter {}".format(epoch, args.nEpochs, iteration, num_iter, optimizer.param_groups[0]['lr'], loss.item(), loss_global.item(), loss_local.item(), loss_fusion_alpha.item(), loss_fusion_comp.item(),speed, exp_time))
 		except Exception as ex:
-			import pdb
-			pdb.set_trace()
+			# import pdb
+			# pdb.set_trace()
 			import sys, traceback
 			ex_type, ex, tb = sys.exc_info()
 			traceback.print_tb(tb)

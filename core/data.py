@@ -93,7 +93,8 @@ class MattingDataset(torch.utils.data.Dataset):
 			fg_path_denoise = self.samples[index][4] if (self.BG_CHOICE=='hd' and self.RSSN_DENOISE) else None
 			bg_path_denoise = self.samples[index][5] if (self.BG_CHOICE=='hd' and self.RSSN_DENOISE) else None
 			# Prepare ori/mask/fg/bg (mandatary)
-			ori = np.array(Image.open(ori_path).convert('RGB'))
+			# ori = np.array(Image.open(ori_path).convert('RGB'))
+			ori = np.array(Image.open(ori_path))
 			mask = trim_img(np.array(Image.open(mask_path)))
 			fg = process_fgbg(ori, mask, True, fg_path)
 			bg = process_fgbg(ori, mask, False, bg_path)
@@ -125,8 +126,8 @@ class MattingDataset(torch.utils.data.Dataset):
 			return ori, mask, fg, bg, trimap, dilation, erosion, mask_path
 		except Exception as ex:
 			print('mask path is ', mask_path)
-			import pdb
-			pdb.set_trace()
+			# import pdb
+			# pdb.set_trace()
 			print(ex)
 
 	def __len__(self):

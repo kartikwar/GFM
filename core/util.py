@@ -191,8 +191,9 @@ def process_fgbg(ori, mask, is_fg, fgbg_path=None):
 			img = ori*mask_3 if is_fg else ori*(1-mask_3)
 		return img
 	except Exception as ex:
-		import pdb
-		pdb.set_trace()
+		# import pdb
+		# pdb.set_trace()
+		print(ex)
 
 def add_guassian_noise(img, fg, bg):
 	row,col,ch= img.shape
