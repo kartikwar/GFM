@@ -11,7 +11,8 @@ Paper link (Arxiv): https://arxiv.org/abs/2010.16188
 
 ########## Root Paths and logging files paths
 REPOSITORY_ROOT_PATH = ''
-AM2K_DATASET_ROOT_PATH = ''
+TRAIN_PATH = '/home/ubuntu/kartik/datasets/background-knockout-dataset-v15/'
+VAL_PATH = '/home/ubuntu/kartik/datasets/test-dataset'
 BG20K_DATASET_ROOT_PATH = ''
 COCO_DATASET_ROOT_PATH = ''
 
@@ -22,20 +23,20 @@ TEST_LOGS_FOLDER = REPOSITORY_ROOT_PATH+'logs/test_logs/'
 DATASET_PATHS_DICT={
 'AM2K':{
 	'TRAIN':{
-		'ROOT_PATH':AM2K_DATASET_ROOT_PATH+'train/',
-		'ORIGINAL_PATH':AM2K_DATASET_ROOT_PATH+'train/original/',
-		'MASK_PATH':AM2K_DATASET_ROOT_PATH+'train/mask/',
-		'FG_PATH':AM2K_DATASET_ROOT_PATH+'train/fg/',
-		'BG_PATH':AM2K_DATASET_ROOT_PATH+'train/bg/',
-		'FG_DENOISE_PATH':AM2K_DATASET_ROOT_PATH+'train/fg_denoise/',
+		'ROOT_PATH':TRAIN_PATH+'good_annos/',
+		'ORIGINAL_PATH':TRAIN_PATH+'good_annos/fg/',
+		'MASK_PATH':TRAIN_PATH+'good_annos/alpha/',
+		'FG_PATH':TRAIN_PATH+'good_annos/fg/',
+		'BG_PATH':TRAIN_PATH+'good_annos/bg/',
+		'FG_DENOISE_PATH':'' + 'train/fg_denoise/',
 		'SAMPLE_NUMBER':1800,
 		'SAMPLE_BAGS':5
 		},
 	'VALIDATION':{
-		'ROOT_PATH':AM2K_DATASET_ROOT_PATH+'validation/',
-		'ORIGINAL_PATH':AM2K_DATASET_ROOT_PATH+'validation/original/',
-		'MASK_PATH':AM2K_DATASET_ROOT_PATH+'validation/mask/',
-		'TRIMAP_PATH':AM2K_DATASET_ROOT_PATH+'validation/trimap/',
+		'ROOT_PATH':VAL_PATH,
+		'ORIGINAL_PATH':VAL_PATH+'images/',
+		'MASK_PATH':VAL_PATH+'annotations/',
+		'TRIMAP_PATH':''+'validation/trimap/',
 		'SAMPLE_NUMBER':200,
 		'SAMPLE_BAGS':1
 		}
@@ -59,8 +60,11 @@ DATASET_PATHS_DICT={
 	}
 }
 
-########## Parameters for training
+########## Parameters for training, 
+# might need a little playing around as well to 
+# get the right config
 CROP_SIZE = [640, 960, 1280]
+# CROP_SIZE = [320, 480, 640]
 RESIZE_SIZE = 320
 TRAIN_DEBUG_FOLDER = REPOSITORY_ROOT_PATH+'results/debug/'
 
@@ -68,6 +72,7 @@ TRAIN_DEBUG_FOLDER = REPOSITORY_ROOT_PATH+'results/debug/'
 MAX_SIZE_H = 1600
 MAX_SIZE_W = 1600
 SHORTER_PATH_LIMITATION=1080
-SAMPLES_ORIGINAL_PATH = REPOSITORY_ROOT_PATH+'samples/original/'
-SAMPLES_RESULT_ALPHA_PATH = REPOSITORY_ROOT_PATH+'samples/result_alpha/'
-SAMPLES_RESULT_COLOR_PATH = REPOSITORY_ROOT_PATH+'samples/result_color/'
+# SAMPLES_ORIGINAL_PATH = REPOSITORY_ROOT_PATH+'samples/original/'
+SAMPLES_ORIGINAL_PATH = '/home/ubuntu/kartik/datasets/test-dataset/images/'
+SAMPLES_RESULT_ALPHA_PATH = REPOSITORY_ROOT_PATH+'samples/test_800_alpha/'
+SAMPLES_RESULT_COLOR_PATH = REPOSITORY_ROOT_PATH+'samples/test_800_color/'

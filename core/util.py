@@ -121,6 +121,8 @@ def save_test_result(save_dir, predict):
 ### Function to generate training data
 #######################################
 def generate_paths_for_dataset(args):
+	# import pdb
+	# pdb.set_trace()
 	BG_CHOICE = args.bg_choice
 	FG_GENERATE = args.fg_generate
 	RSSN_DENOISE = args.rssn_denoise
@@ -148,7 +150,8 @@ def generate_paths_for_dataset(args):
 
 	for mask_name in mask_list:
 		path_list = []
-		ori_path = ORI_PATH+extract_pure_name(mask_name)+'.jpg'
+		# ori_path = ORI_PATH+extract_pure_name(mask_name)+'.jpg'
+		ori_path = ORI_PATH + mask_name
 		mask_path = MASK_PATH+mask_name
 		path_list.append(ori_path)
 		path_list.append(mask_path)
@@ -180,12 +183,17 @@ def resize_img(ori, img):
 	return img
 
 def process_fgbg(ori, mask, is_fg, fgbg_path=None):
-	if fgbg_path is not None:
-		img = np.array(Image.open(fgbg_path))
-	else:
-		mask_3 = (mask/255.0)[:, :, np.newaxis].astype(np.float32)
-		img = ori*mask_3 if is_fg else ori*(1-mask_3)
-	return img
+	try:
+		if fgbg_path is not None:
+			img = np.array(Image.open(fgbg_path))
+		else:
+			mask_3 = (mask/255.0)[:, :, np.newaxis].astype(np.float32)
+			img = ori*mask_3 if is_fg else ori*(1-mask_3)
+		return img
+	except Exception as ex:
+		# import pdb
+		# pdb.set_trace()
+		print(ex)
 
 def add_guassian_noise(img, fg, bg):
 	row,col,ch= img.shape

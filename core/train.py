@@ -77,40 +77,54 @@ def format_second(secs):
 
 def train(args, model, optimizer, train_loader, epoch):
 	model = torch.nn.DataParallel(model).cuda()
+	# import pdb
+	# pdb.set_trace()
 	model.train()
 	t0 = time.time()
 
 	loss_each_epoch=[]
 	args.logging.info("===============================")
 	for iteration, batch in enumerate(train_loader, 1):
-		torch.cuda.empty_cache()
-		batch_new = []
-		for item in batch:
-			item = Variable(item).cuda()
-			batch_new.append(item)
-		[ori, mask, fg, bg, trimap, dilation, erosion] = batch_new
-		optimizer.zero_grad()
-		predict_global, predict_local, predict_fusion = model(ori)
-		predict_fusion = predict_fusion.cuda()
-		if args.rosta=='TT':
-			loss_global =get_crossentropy_loss(3, trimap, predict_global)
-		else:
-			loss_global =get_crossentropy_loss(2, mask, predict_global)
-		loss_local = get_alpha_loss(predict_local, mask, trimap) + get_laplacian_loss(predict_local, mask, trimap)
+		try: 
+			torch.cuda.empty_cache()
+			batch_new = []
+			for item in batch:
+				try:
+					item = Variable(item).cuda()
+				except:
+					temp = 'not a variable'
+				batch_new.append(item)
+			[ori, mask, fg, bg, trimap, dilation, erosion, name] = batch_new
+			# import pdb
+			# pdb.set_trace()
+			optimizer.zero_grad()
+			predict_global, predict_local, predict_fusion = model(ori)
+			predict_fusion = predict_fusion.cuda()
+			if args.rosta=='TT':
+				loss_global =get_crossentropy_loss(3, trimap, predict_global)
+			else:
+				loss_global =get_crossentropy_loss(2, mask, predict_global)
+			loss_local = get_alpha_loss(predict_local, mask, trimap) + get_laplacian_loss(predict_local, mask, trimap)
 
-		loss_fusion_alpha = get_alpha_loss_whole_img(predict_fusion, mask) + get_laplacian_loss_whole_img(predict_fusion, mask)
-		loss_fusion_comp = get_composition_loss_whole_img(ori, mask, fg, bg, predict_fusion)
-		loss = 0.25*loss_global+0.25*loss_local+0.25*loss_fusion_alpha+0.25*loss_fusion_comp
-		loss.backward()
-		optimizer.step()
+			loss_fusion_alpha = get_alpha_loss_whole_img(predict_fusion, mask) + get_laplacian_loss_whole_img(predict_fusion, mask)
+			loss_fusion_comp = get_composition_loss_whole_img(ori, mask, fg, bg, predict_fusion)
+			loss = 0.25*loss_global+0.25*loss_local+0.25*loss_fusion_alpha+0.25*loss_fusion_comp
+			loss.backward()
+			optimizer.step()
 
-		if iteration !=  0:
-			t1 = time.time()
-			num_iter = len(train_loader)
-			speed = (t1 - t0) / iteration
-			exp_time = format_second(speed * (num_iter * (args.nEpochs - epoch + 1) - iteration))          
-			loss_each_epoch.append(loss.item())
-			args.logging.info("GFM-Epoch[{}/{}]({}/{}) Lr:{:.8f} Loss:{:.5f} Global:{:.5f} Local:{:.5f} Fusion-alpha:{:.5f} Fusion-comp:{:.5f} Speed:{:.5f}s/iter {}".format(epoch, args.nEpochs, iteration, num_iter, optimizer.param_groups[0]['lr'], loss.item(), loss_global.item(), loss_local.item(), loss_fusion_alpha.item(), loss_fusion_comp.item(),speed, exp_time))
+			if iteration !=  0:
+				t1 = time.time()
+				num_iter = len(train_loader)
+				speed = (t1 - t0) / iteration
+				exp_time = format_second(speed * (num_iter * (args.nEpochs - epoch + 1) - iteration))          
+				loss_each_epoch.append(loss.item())
+				args.logging.info("GFM-Epoch[{}/{}]({}/{}) Lr:{:.8f} Loss:{:.5f} Global:{:.5f} Local:{:.5f} Fusion-alpha:{:.5f} Fusion-comp:{:.5f} Speed:{:.5f}s/iter {}".format(epoch, args.nEpochs, iteration, num_iter, optimizer.param_groups[0]['lr'], loss.item(), loss_global.item(), loss_local.item(), loss_fusion_alpha.item(), loss_fusion_comp.item(),speed, exp_time))
+		except Exception as ex:
+			# import pdb
+			# pdb.set_trace()
+			import sys, traceback
+			ex_type, ex, tb = sys.exc_info()
+			traceback.print_tb(tb)
 			
 def save_last_checkpoint(args, model):
 	args.logging.info('=====> Saving best model',str(args.epoch))
@@ -155,6 +169,8 @@ def main():
 	train_loader = load_dataset(args)
 	logging.info('===> Building the model')
 	model, start_epoch = load_model(args)
+	# import pdb
+	# pdb.set_trace()
 	logging.info('===> Initialize optimizer')
 	optimizer = optim.Adam(filter(lambda p: p.requires_grad, model.parameters()), lr=args.lr)
 	now = datetime.datetime.now()
@@ -163,8 +179,7 @@ def main():
 		print(f'Train on Epoch: {epoch}')
 		train(args, model, optimizer, train_loader, epoch)
 		args.epoch = epoch
-
-	save_last_checkpoint(args, model)
+		save_last_checkpoint(args, model)
 
 if __name__ == "__main__":
 	main()
